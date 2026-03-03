@@ -1,0 +1,131 @@
+<header id="site-header"
+  class="fixed top-0 left-0 z-50 w-full
+         transition-all duration-300
+         bg-transparent">
+
+  <div class="max-w-full px-3">
+    <div class="flex flex-nowrap items-center justify-between py-2">
+
+      <!-- LOGO + TÊN CLB -->
+      <a href="/"
+         class="flex items-center gap-2 no-underline min-w-0">
+
+        <img
+          src="https://vovinamctut.id.vn/logo_clb.png"
+          alt="Logo"
+          class="h-12 sm:h-14 md:h-18 w-auto flex-shrink-0"
+        />
+
+        <!-- ẨN MOBILE – HIỆN DESKTOP -->
+        <span
+          class="hidden md:inline
+                 font-bold text-blue-600
+                 text-2xl
+                 whitespace-nowrap">
+          CLB Vovinam CTUT
+        </span>
+      </a>
+
+      <!-- MENU RIGHT -->
+      <div class="flex items-center gap-1 md:gap-3">
+
+        <!-- ĐIỂM DANH -->
+        <a
+          href="/attendance"
+          class="font-bold text-blue-600
+                 text-lg md:text-xl
+                 hover:text-blue-700
+                 whitespace-nowrap">
+          Điểm danh
+        </a>
+
+        {% if role %}
+        <!-- USER DROPDOWN -->
+        <div class="dropdown">
+          <button
+            class="flex items-center justify-center
+                   w-10 h-10
+                   border border-gray-300
+                   rounded-lg
+                   hover:bg-gray-100
+                   transition
+                   p-0"
+            data-bs-toggle="dropdown"
+            aria-expanded="false">
+
+            <i class="bi bi-list
+                      text-2xl md:text-2xl
+                      text-gray-700"></i>
+          </button>
+
+          <ul class="dropdown-menu dropdown-menu-end shadow text-base">
+
+            {% if role == 'admin' %}
+            <li>
+              <a class="dropdown-item py-2" href="/admin">
+                <i class="bi bi-speedometer2 me-2"></i> Admin
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item py-2" href="/admin/attendance-stats">
+                <i class="bi bi-bar-chart-line me-2"></i> Thống kê điểm danh
+              </a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            {% endif %}
+
+            <li>
+              <a class="dropdown-item py-2" href="/account">
+                <i class="bi bi-person me-2"></i> Thông tin tài khoản
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item py-2" href="/change-password">
+                <i class="bi bi-key me-2"></i> Đổi mật khẩu
+              </a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item text-danger py-2" href="/logout">
+                <i class="bi bi-box-arrow-right me-2"></i> Đăng xuất
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+        {% else %}
+        <!-- ĐĂNG NHẬP -->
+        <a
+          href="/login"
+          class="font-semibold
+                 text-lg md:text-lg
+                 px-2 py-1
+                 border border-blue-500
+                 rounded-lg
+                 text-blue-600
+                 hover:bg-blue-50
+                 whitespace-nowrap">
+          Đăng nhập
+        </a>
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- SCRIPT: đổi nền header khi scroll -->
+<script>
+  const header = document.getElementById('site-header');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+      header.classList.add('bg-white', 'shadow-md');
+      header.classList.remove('bg-transparent');
+    } else {
+      header.classList.remove('bg-white', 'shadow-md');
+      header.classList.add('bg-transparent');
+    }
+  });
+</script>

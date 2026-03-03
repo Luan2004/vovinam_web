@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CLB Vovinam CTUT</title>
+
+  <meta name="description" content="Trang chủ CLB Vovinam CTUT">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    @keyframes floatLeft {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+    @keyframes floatRight {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-18px); }
+    }
+    .float-left {
+      animation: floatLeft 5s ease-in-out infinite;
+    }
+    .float-right {
+      animation: floatRight 6s ease-in-out infinite;
+    }
+  </style>
+</head>
+
+<body class="bg-white">
+
+  {% include "header.html" %}
+
+  <!-- HERO -->
+<section
+  id="hero"
+  class="relative w-full h-[100dvh] overflow-hidden pt-[72px]">
+
+    <!-- Background -->
+    <img
+      src="https://vovinamctut.id.vn/background.png"
+      class="absolute inset-0 w-full h-full object-cover"
+      alt="Background">
+
+    <!--  Bên trái - Nam nữ-->
+    <img
+    src="https://vovinamctut.id.vn/lb.png"
+    class="absolute
+            -left-6 sm:-left-6 md:-left-12 lg:-left-20
+            bottom-0
+            w-[180px] sm:w-[200px] md:w-[320px] lg:w-[420px]
+            float-left pointer-events-none"
+    alt="Left image">
+
+    <!-- Bên Phải - Momentos-->
+    <img
+    src="https://vovinamctut.id.vn/rb.png"
+    class="absolute
+            right-0
+            bottom-0
+            w-[160px] sm:w-[190px] md:w-[280px] lg:w-[380px]
+            float-right pointer-events-none"
+    alt="Right image">
+
+
+    <!-- Center content -->
+    <div class="relative z-10 h-full flex flex-col
+                items-center justify-center text-center px-4
+                -mt-28 sm:-mt-12 md:-mt-24">
+
+      <p class="mt-4 text-gray-700 text-base sm:text-xl leading-relaxed">
+        <span class="font-extrabold
+                    bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500
+                    bg-clip-text text-transparent">
+          CLB Vovinam CTUT
+        </span>
+        được thành lập 18/1/2019. <br><br>
+        Với mục tiêu rèn luyện sức khỏe, tự vệ,<br>
+        trao đổi kinh nghiệm, tạo nền tảng cho các bạn<br>
+         có thể tham gia các giải đấu lớn hơn.<br><br>
+        CLB hoạt động định kỳ vào 18h30 tối thứ 2, 4, 6 hàng tuần.
+      </p>
+    </div>
+</section>
+
+
+
+  <!-- SCRIPT ĐỔI NỀN HEADER -->
+  <script>
+    const header = document.querySelector('header');
+    const hero = document.getElementById('hero');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > hero.offsetHeight - 80) {
+        header.classList.add('bg-white', 'shadow-md');
+        header.classList.remove('bg-transparent');
+      } else {
+        header.classList.remove('bg-white', 'shadow-md');
+        header.classList.add('bg-transparent');
+      }
+    });
+  </script>
+
+  <!-- HOẠT ĐỘNG NỐI TIẾP -->
+<section id="activities" class="relative py-16 sm:py-20 bg-white">
+  <!-- CARD BAO QUANH HOẠT ĐỘNG -->
+    <div class="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition p-6 sm:p-8">
+    <!-- Heading -->
+    <div class="flex flex-col items-start gap-3 mb-10">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900">
+        Thi thăng đai sơ đẳng – 18/01
+      </h2>
+    </div>
+
+    <!-- Highlight + Info -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
+      <!-- Highlight card -->
+      <div class="lg:col-span-2 rounded-2xl border border-gray-200 p-6 shadow-sm">
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 flex items-center justify-center text-white">
+            <i class="bi bi-award text-xl"></i>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold text-gray-900">
+              Thành tích nổi bật
+            </h3>
+
+            <p class="text-gray-600 mt-2 leading-relaxed">
+              Chúc mừng <span class="font-semibold text-gray-900">Phạm Lê Nhật</span> đạt
+              <span class="font-semibold text-blue-700">đai danh dự</span> trong kỳ thi thăng đai sơ đẳng ngày 18/01.
+              Đây là kết quả của quá trình tập luyện nghiêm túc và tinh thần kỷ luật.
+            </p>
+
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-sm">
+                <i class="bi bi-geo-alt"></i> Cần Thơ
+              </span>
+              <span class="px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-sm">
+                <i class="bi bi-clock"></i> 18/01
+              </span>
+              <span class="px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-sm">
+                <i class="bi bi-people"></i> Võ sinh tham gia đông đủ
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery -->
+    <div class="flex items-end justify-between gap-4 mb-4">
+      <h3 class="text-lg sm:text-xl font-extrabold text-gray-900">
+        Khoảnh khắc hoạt động
+      </h3>
+    </div>
+
+    <div id="activityGallery" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <!-- JS sẽ render ảnh ở đây -->
+    </div>
+  </div>
+
+  <!-- Modal xem ảnh -->
+  <div id="imgModal"
+       class="fixed inset-0 z-[9999] hidden items-center justify-center bg-black/70 p-4">
+    <div class="relative w-full max-w-5xl">
+      <button id="closeModal"
+              class="absolute -top-10 right-0 text-white/90 hover:text-white text-3xl leading-none">
+        &times;
+      </button>
+
+      <div class="rounded-2xl overflow-hidden bg-black shadow-2xl">
+        <img id="modalImg" src="" alt="Ảnh hoạt động" class="w-full h-auto object-contain">
+      </div>
+
+      <p id="modalCaption" class="mt-3 text-center text-white/90 text-sm"></p>
+    </div>
+  </div>
+
+  <script>
+    // ✅ THAY LINK ẢNH TẠI ĐÂY (có thể dùng ảnh trên domain của bạn hoặc static)
+    const activityImages = [
+      {
+        src: "https://vovinamctut.id.vn/thi_so_dang_18_1/tap_the.jpg",
+        caption: "Tập thể CLB tại kỳ thi thăng đai sơ đẳng (18/01)"
+      },
+      {
+        src: "https://vovinamctut.id.vn/thi_so_dang_18_1/truoc_gio_thi.jpg",
+        caption: "Khoảnh khắc làm lễ và chuẩn bị nội dung thi"
+      },
+      {
+        src: "https://vovinamctut.id.vn/thi_so_dang_18_1/5ae.jpg",
+        caption: "..."
+      },
+      {
+        src: "https://vovinamctut.id.vn/thi_so_dang_18_1/dai_danh_du.jpg",
+        caption: "Chúc mừng Phạm Lê Nhật đạt đai danh dự"
+      }
+    ];
+
+    const gallery = document.getElementById("activityGallery");
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("modalImg");
+    const modalCaption = document.getElementById("modalCaption");
+    const closeModal = document.getElementById("closeModal");
+
+    function openModal(src, caption) {
+      modalImg.src = src;
+      modalCaption.textContent = caption || "";
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+      document.body.style.overflow = "hidden";
+    }
+
+    function hideModal() {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+      modalImg.src = "";
+      modalCaption.textContent = "";
+      document.body.style.overflow = "";
+    }
+
+    // Render gallery cards
+    activityImages.forEach((img) => {
+      const card = document.createElement("button");
+      card.type = "button";
+      card.className =
+        "group text-left rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-md transition bg-white";
+
+      card.innerHTML = `
+        <div class="relative aspect-[4/3] overflow-hidden">
+          <img src="${img.src}" alt="Ảnh hoạt động"
+               class="w-full h-full object-cover group-hover:scale-[1.03] transition duration-300">
+          <div class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-black/70 to-transparent">
+            <p class="text-white text-sm line-clamp-2">${img.caption || ""}</p>
+          </div>
+        </div>
+      `;
+
+      card.addEventListener("click", () => openModal(img.src, img.caption));
+      gallery.appendChild(card);
+    });
+
+    // Close handlers
+    closeModal.addEventListener("click", hideModal);
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) hideModal();
+    });
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !modal.classList.contains("hidden")) hideModal();
+    });
+  </script>
+</section>
+
+<!-- HOẠT ĐỘNG: KỶ NIỆM 7 NĂM THÀNH LẬP CLB -->
+<section id="anniversary7" class="relative py-16 sm:py-20 bg-white">
+  <div class="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition p-6 sm:p-8">
+
+    <!-- Heading -->
+    <div class="flex flex-col items-start gap-3 mb-10">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900">
+        Kỷ niệm 7 năm thành lập CLB
+      </h2>
+
+      <p class="text-gray-600 leading-relaxed max-w-3xl">
+        Hành trình 7 năm là dấu ấn của tinh thần kỷ luật, đoàn kết và nỗ lực không ngừng.
+        Cảm ơn tất cả võ sinh đã cùng nhau tạo nên một tập thể vững mạnh và đầy nhiệt huyết.
+      </p>
+    </div>
+
+    <!-- Gallery (chỉ hiển thị ảnh đại diện theo nhóm) -->
+    <div class="flex items-end justify-between gap-4 mb-4">
+      <h3 class="text-lg sm:text-xl font-extrabold text-gray-900">
+        Khoảnh khắc kỷ niệm
+      </h3>
+    </div>
+
+    <div id="annivGallery" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <!-- JS render -->
+    </div>
+  </div>
+
+  <!-- Modal Slider -->
+  <div id="annivModal"
+       class="fixed inset-0 z-[9999] hidden items-center justify-center bg-black/70 p-4">
+    <div class="relative w-full max-w-5xl">
+
+      <!-- Close -->
+      <button id="annivClose"
+              class="absolute -top-10 right-0 text-white/90 hover:text-white text-3xl leading-none">
+        &times;
+      </button>
+
+      <!-- Prev/Next -->
+      <button id="annivPrev"
+              class="absolute left-2 top-1/2 -translate-y-1/2 z-10
+                     w-11 h-11 rounded-full bg-black/40 hover:bg-black/60
+                     text-white flex items-center justify-center">
+        <i class="bi bi-chevron-left text-2xl"></i>
+      </button>
+
+      <button id="annivNext"
+              class="absolute right-2 top-1/2 -translate-y-1/2 z-10
+                     w-11 h-11 rounded-full bg-black/40 hover:bg-black/60
+                     text-white flex items-center justify-center">
+        <i class="bi bi-chevron-right text-2xl"></i>
+      </button>
+
+      <!-- Media (Image / Video) -->
+      <div class="rounded-2xl overflow-hidden bg-black shadow-2xl touch-pan-y">
+        <div id="annivMedia"
+             class="w-full h-[70vh] flex items-center justify-center bg-black">
+        </div>
+      </div>
+
+      <!-- Caption -->
+      <div class="mt-3 flex items-center justify-between gap-3 text-white/90 text-sm">
+        <p id="annivCaption" class="text-center flex-1"></p>
+        <p id="annivCounter" class="shrink-0 text-white/70"></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // =========================
+    // 1) DỮ LIỆU: chia theo nhóm
+    // =========================
+    const groups = [
+      {
+        key: "tap_the",
+        title: "Ảnh tập thể",
+        images: [
+          { src: "https://vovinamctut.id.vn/sinh_nhat_7/tap_the.jpg", caption: "Tập thể CLB Vovinam CTUT" },
+          { src: "https://vovinamctut.id.vn/sinh_nhat_7/ban_chu_nhiem.jpg", caption: "Ban chủ nhiệm qua các nhiệm kỳ" }
+        ]
+      },
+      {
+        key: "minigame",
+        title: "Mini game",
+        images: [
+          {
+            type: "video",
+            youtubeId: "uVbCW4fdOP4",
+            thumb: "https://img.youtube.com/vi/uVbCW4fdOP4/hqdefault.jpg",
+            caption: "Mini game – Video tổng hợp khoảnh khắc"
+          },
+          {
+            type: "video",
+            youtubeId: "m09y52zTHAs",
+            thumb: "https://img.youtube.com/vi/m09y52zTHAs/hqdefault.jpg",
+            caption: "Mini game – Hoạt động sôi nổi (YouTube Shorts)"
+          },
+          { src: "https://vovinamctut.id.vn/sinh_nhat_7/minigame.jpg", caption: "Trao giải thưởng" }
+        ]
+      },
+      {
+        key: "ngoi_ben_duoi",
+        title: "Các bạn ngồi bên dưới",
+        images: [
+          { src: "https://vovinamctut.id.vn/sinh_nhat_7/ben_duoi.jpg", caption: "Các bạn ngồi bên dưới (1)" },
+          { src: "https://vovinamctut.id.vn/sinh_nhat_7/ban2.jpg", caption: "Các bạn ngồi bên dưới (2)" },
+          { src: "https://vovinamctut.id.vn/sinh_nhat_7/ban3.jpg", caption: "Các bạn ngồi bên dưới (3)" },
+          { src: "https://vovinamctut.id.vn/sinh_nhat_7/ban4.jpg", caption: "Góc khác - ngồi bên dưới (4)" },
+          { src: "https://vovinamctut.id.vn/sinh_nhat_7/ban5.jpg", caption: "Góc khác - ngồi bên dưới (5)" },
+          { src: "https://vovinamctut.id.vn/ky_niem_7_nam/ban1.jpg", caption: "Góc khác - ngồi bên dưới (6)" }
+        ]
+      },
+      {
+        key: "chuan_bi",
+        title: "Khâu chuẩn bị",
+        images: [
+          { src: "https://vovinamctut.id.vn/sinh_nhat_7/banh_kem.jpg", caption: "Bánh kem chuẩn bị" },
+          { src: "https://vovinamctut.id.vn/sinh_nhat_7/chuan_bi.jpg", caption: "Khâu chuẩn bị chương trình" }
+        ]
+      }
+    ];
+
+    // =========================
+    // 2) RENDER: 1 card/nhóm + overlay +n
+    // =========================
+    const annivGallery = document.getElementById("annivGallery");
+
+    function renderGroupCards() {
+      annivGallery.innerHTML = "";
+
+      groups.forEach((g, groupIndex) => {
+        if (!g.images || g.images.length === 0) return;
+
+        const cover = g.images[0];
+        const isVideo = cover.type === "video";
+        const coverSrc = isVideo ? cover.thumb : cover.src;
+        const moreCount = Math.max(0, g.images.length - 1);
+
+        const card = document.createElement("button");
+        card.type = "button";
+        card.className =
+          "group text-left rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-md transition bg-white";
+
+        card.innerHTML = `
+          <div class="relative aspect-[4/3] overflow-hidden">
+            <img src="${coverSrc}" alt="${g.title}"
+                 class="w-full h-full object-cover group-hover:scale-[1.03] transition duration-300">
+
+            ${isVideo ? `
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-14 h-14 rounded-full bg-black/60 flex items-center justify-center">
+                  <i class="bi bi-play-fill text-white text-3xl"></i>
+                </div>
+              </div>
+            ` : ""}
+
+            <!-- overlay gradient + title -->
+            <div class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-black/70 to-transparent">
+              <p class="text-white text-sm font-semibold line-clamp-1">${g.title}</p>
+              <p class="text-white/90 text-xs line-clamp-1">${cover.caption || ""}</p>
+            </div>
+
+            <!-- badge +n -->
+            ${
+              moreCount > 0
+                ? `<div class="absolute top-3 right-3 px-3 py-1 rounded-full bg-black/60 text-white text-sm font-semibold">
+                     +${moreCount}
+                   </div>`
+                : ""
+            }
+          </div>
+        `;
+
+        card.addEventListener("click", () => openSlider(groupIndex, 0));
+        annivGallery.appendChild(card);
+      });
+    }
+
+    renderGroupCards();
+
+    // =========================
+    // 3) MODAL SLIDER: mũi tên + swipe
+    // =========================
+    const annivModal = document.getElementById("annivModal");
+    const annivMedia = document.getElementById("annivMedia");
+    const annivCaption = document.getElementById("annivCaption");
+    const annivCounter = document.getElementById("annivCounter");
+    const annivClose = document.getElementById("annivClose");
+    const annivPrev = document.getElementById("annivPrev");
+    const annivNext = document.getElementById("annivNext");
+
+    let currentGroup = 0;
+    let currentIndex = 0;
+
+    function showSlide() {
+      const items = groups[currentGroup].images;
+      const item = items[currentIndex];
+
+      // Clear để stop video khi chuyển slide
+      annivMedia.innerHTML = "";
+
+      if (item.type === "video") {
+        annivMedia.innerHTML = `
+          <iframe
+            class="w-full h-full"
+            src="https://www.youtube.com/embed/${item.youtubeId}?autoplay=1&rel=0&modestbranding=1"
+            title="YouTube video player"
+            frameborder="0"
+            allow="autoplay; encrypted-media; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        `;
+      } else {
+        annivMedia.innerHTML = `
+          <img src="${item.src}" alt="Ảnh kỷ niệm"
+               class="w-full h-full object-contain select-none"
+               draggable="false">
+        `;
+      }
+
+      annivCaption.textContent = item.caption || "";
+      annivCounter.textContent = `${currentIndex + 1}/${items.length}`;
+    }
+
+    function openSlider(groupIdx, imgIdx) {
+      currentGroup = groupIdx;
+      currentIndex = imgIdx;
+
+      annivModal.classList.remove("hidden");
+      annivModal.classList.add("flex");
+      document.body.style.overflow = "hidden";
+
+      showSlide();
+    }
+
+    function closeSlider() {
+      annivModal.classList.add("hidden");
+      annivModal.classList.remove("flex");
+
+      // Stop video + clear
+      annivMedia.innerHTML = "";
+      annivCaption.textContent = "";
+      annivCounter.textContent = "";
+      document.body.style.overflow = "";
+    }
+
+    function nextSlide() {
+      const len = groups[currentGroup].images.length;
+      currentIndex = (currentIndex + 1) % len;
+      showSlide();
+    }
+
+    function prevSlide() {
+      const len = groups[currentGroup].images.length;
+      currentIndex = (currentIndex - 1 + len) % len;
+      showSlide();
+    }
+
+    // Click handlers
+    annivClose.addEventListener("click", closeSlider);
+    annivNext.addEventListener("click", nextSlide);
+    annivPrev.addEventListener("click", prevSlide);
+
+    // Click outside to close
+    annivModal.addEventListener("click", (e) => {
+      if (e.target === annivModal) closeSlider();
+    });
+
+    // Keyboard
+    window.addEventListener("keydown", (e) => {
+      if (annivModal.classList.contains("hidden")) return;
+
+      if (e.key === "Escape") closeSlider();
+      if (e.key === "ArrowRight") nextSlide();
+      if (e.key === "ArrowLeft") prevSlide();
+    });
+
+    // Swipe (touch) - gắn vào annivMedia để hoạt động cho cả ảnh & video
+    let startX = 0;
+    let startY = 0;
+    let isSwiping = false;
+
+    const SWIPE_THRESHOLD = 40; // px
+
+    annivMedia.addEventListener("touchstart", (e) => {
+      if (!e.touches || e.touches.length === 0) return;
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+      isSwiping = true;
+    }, { passive: true });
+
+    annivMedia.addEventListener("touchend", (e) => {
+      if (!isSwiping) return;
+      isSwiping = false;
+
+      const endX = (e.changedTouches && e.changedTouches[0]) ? e.changedTouches[0].clientX : startX;
+      const endY = (e.changedTouches && e.changedTouches[0]) ? e.changedTouches[0].clientY : startY;
+
+      const dx = endX - startX;
+      const dy = endY - startY;
+
+      // ưu tiên swipe ngang
+      if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > SWIPE_THRESHOLD) {
+        if (dx < 0) nextSlide();   // kéo sang trái -> ảnh tiếp
+        else prevSlide();          // kéo sang phải -> ảnh trước
+      }
+    }, { passive: true });
+  </script>
+</section>
+
+  {% include "footer.html" %}
+
+</body>
+</html>
